@@ -1,0 +1,43 @@
+@import 'assets/bootstrap/css/bootstrap.min.css';
+
+body{
+    background-color: #eceae6;
+}
+
+.blue-bg-color{
+    background-color: #2da0d6 !important;
+}
+
+.dark-bg-color{
+    background-color: #32415e !important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #2da0d6;
+    border-color: #2da0d6;
+}
+  
+.btn-primary:hover {
+    color: #fff;
+    background-color: #32415e;
+    border-color: #32415e;
+}
+  
+.btn-primary:focus, .btn-primary.focus {
+    color: #fff;
+    background-color: #32415e;
+    border-color: #32415e;
+    box-shadow: none !important;
+}
+  
+.btn-primary.disabled, .btn-primary:disabled {
+    color: #fff;
+    background-color: #2da0d6;
+    border-color: #2da0d6;
+}
+
+.bg-primary{
+   background-color: #333333 !important; 
+}
+

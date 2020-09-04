@@ -1,0 +1,59 @@
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
+<div class="form-signup">
+    <div class="text-center">
+        <img class="mb-2" src="../../../assets/imgs/logo.png"  style="max-width: 400px; width:100%;">
+    </div>
+    <h1 class="h4 text-center">Crear una cuenta</h1>
+    <hr>
+    <div *ngIf="error !=''" class="alert alert-danger" role="alert">
+        {{error}}
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+            <input type="text"  class="form-control form-control-lg" [(ngModel)]="signup.name" placeholder="Nombres" required autofocus>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+            <input type="text"  class="form-control form-control-lg" [(ngModel)]="signup.dni" placeholder="Cédula de ciudadanía" required>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+            <input type="text"  class="form-control form-control-lg" [(ngModel)]="signup.phone" placeholder="Celular" required>
+        </div>
+        <div class="col-sm-12 form-group">
+            <input type="email"  class="form-control form-control-lg" [(ngModel)]="signup.email" placeholder="Correo electrónico" required>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+            <input type="password"  class="form-control form-control-lg" [(ngModel)]="signup.password" placeholder="Contraseña" required>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+            <input type="password"  class="form-control form-control-lg" [(ngModel)]="signup.password_confirm" placeholder="Repetir contraseña" required>
+        </div>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-lg btn-primary btn-block" (click)="signUp()">Crear cuenta</button>
+    </div>
+    <hr>
+    <div class="text-center">
+        <a [routerLink]="['/forgot-password']" >¿Se te olvidó tu contraseña?</a>
+    </div>
+    <div class="text-center">
+        <a [routerLink]="['/login']" >¿Ya tienes una cuenta? ¡Iniciar sesión!</a>
+    </div>
+</div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal fade"  tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+            <i class="material-icons font-lg text-success">check_circle</i>
+            <br>
+            <span class="text-success">{{success}}</span>
+            <div class="my-3">
+                <a [routerLink]="['/login']" class="btn btn-outline-success" data-dismiss="modal" >Aceptar</a>
+            </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!--end modal-->
+
